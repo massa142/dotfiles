@@ -121,3 +121,6 @@ fi
 # go path
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
+
+# homebrew cask 
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
