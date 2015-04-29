@@ -85,13 +85,17 @@ if [ -e /usr/local/share/zsh-completions ]; then
 fi
 
 # yandere
-function command_not_found_handler() {
-echo "ねえ、「$0」って誰かな……？ 私そんな名前、聞いたことないな……。
-ねえ、いつまでも、そうやって笑って誤魔化せると思ってる……？ 私だってそんなに馬鹿じゃないんだよ…… ?"
-}
+#function command_not_found_handler() {
+#echo "ねえ、「$0」って誰かな……？ 私そんな名前、聞いたことないな……。
+#ねえ、いつまでも、そうやって笑って誤魔化せると思ってる……？ 私だってそんなに馬鹿じゃないんだよ…… ?"
+#}
 
+# osaka
 setopt correct
-SPROMPT="本当は「%r」これなんでしょ？お兄ちゃん?[いいえn][はいy]?"
+SPROMPT="ほんまは「%r」これなんちゃうん?[いいえn][はいy]?"
+
+# fuck
+alias fuck='eval $(thefuck $(fc -ln -1))'
 
 # Homebrew
 export PATH=/usr/local/bin:$PATH
