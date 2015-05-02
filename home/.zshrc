@@ -101,6 +101,11 @@ alias fuck='eval $(thefuck $(fc -ln -1))'
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
+# nodebrew
+if [[ -f ~/.nodebrew/nodebrew ]]; then
+    export PATH=$HOME/.nodebrew/current/bin:$PATH
+fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
