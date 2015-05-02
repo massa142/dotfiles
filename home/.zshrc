@@ -103,7 +103,7 @@ export PATH=/usr/local/sbin:$PATH
 
 # nodebrew
 if [[ -f ~/.nodebrew/nodebrew ]]; then
-    export PATH=$HOME/.nodebrew/current/bin:$PATH
+    export PATH=$PATH:$HOME/.nodebrew/current/bin
 fi
 
 ### Added by the Heroku Toolbelt
