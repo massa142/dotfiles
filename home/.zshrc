@@ -116,7 +116,7 @@ zstyle ':chpwd:*' recent-dirs-max 5000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
-#rbenv
+# rbenv
 export PATH=/usr/local/bin:$PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -133,3 +133,7 @@ export PATH=$PATH:$GOPATH/bin
 
 # homebrew cask 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# VPN scutil
+alias vc='scutil --nc start'
+alias vd='scutil --nc stop'
