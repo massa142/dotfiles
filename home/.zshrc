@@ -100,6 +100,7 @@ alias fuck='eval $(thefuck $(fc -ln -1))'
 # Homebrew
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:?/} brew"
 
 # nodebrew
 if [[ -f ~/.nodebrew/nodebrew ]]; then
