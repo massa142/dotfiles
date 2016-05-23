@@ -154,3 +154,6 @@ if exists percol; then
   zle -N percol_select_history
   bindkey '^R' percol_select_history
 fi
+
+## pyc
+export PYTHONDONTWRITEBYTECODE=1
