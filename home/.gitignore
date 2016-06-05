@@ -1,4 +1,11 @@
+# Mac OS
 .DS_Store
+
+# IntelliJ IDEA
 .idea/
-.vagrant/
-target/
+
+# virtualenv
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
