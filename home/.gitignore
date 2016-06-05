@@ -9,3 +9,6 @@
 [Bb]in
 [Ii]nclude
 [Ll]ib
+
+# pip
+pip-selfcheck.json
