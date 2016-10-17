@@ -157,3 +157,6 @@ fi
 
 ## pyc
 export PYTHONDONTWRITEBYTECODE=1
+
+## Yarn
+export PATH="$PATH:$HOME/.yarn/bin"
