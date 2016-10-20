@@ -1,8 +1,8 @@
 [user]
 	name = massa142
-	email = mstk214@gmail.com
+	email = arai.masataka142@gmail.com
 [include]
-    path = .gitconfig.local
+	path = .gitconfig.local
 [core]
 	excludesfile = ~/.gitignore
 	pager = less -r
@@ -20,6 +20,8 @@
   	sync = !git checkout master && git pull origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*') && git-prune-remote-branch --noop
 	mergelog = log --merges --pretty=format:'%C(yellow)%h %Cgreen%ci %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
 	history = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cd %Cblue%cn%Cred%d %Creset%s'
+	pr = pull-request
+	see = browse
 [rebase]
 	autosquash = true
 [push]
@@ -27,13 +29,12 @@
 [branch]
         autosetuprebase = always
 [ghq]
-    root = ~/src
+	root = ~/src
 [web]
-    browser = google-chrome
+	browser = google-chrome
 [browse-remote "github.com"]
-        top = https://{host}/{path}
-        ref = https://{host}/{path}/tree/{short_ref}
-        rev = https://{host}/{path}/commit/{commit}
-        pr = https://{host}/{path}/pull/{short_ref}
-        file = "https://{host}/{path}/{file.directory? and :tree or :blob}/{short_rev}/{file}{lines && \"#L%s\" % lines.join(\"-\")}"
-
+	top = https://{host}/{path}
+	ref = https://{host}/{path}/tree/{short_ref}
+	rev = https://{host}/{path}/commit/{commit}
+	pr = https://{host}/{path}/pull/{short_ref}
+	file = "https://{host}/{path}/{file.directory? and :tree or :blob}/{short_rev}/{file}{lines && \"#L%s\" % lines.join(\"-\")}"	
