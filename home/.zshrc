@@ -158,5 +158,8 @@ fi
 ## pyc
 export PYTHONDONTWRITEBYTECODE=1
 
+# postgres
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
 ## Yarn
 export PATH="$PATH:$HOME/.yarn/bin"
