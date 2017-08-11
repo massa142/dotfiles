@@ -163,3 +163,8 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 ## Yarn
 export PATH="$PATH:$HOME/.yarn/bin"
+
+# Python
+export PATH=/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.5/bin:$PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH
