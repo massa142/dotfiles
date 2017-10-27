@@ -168,3 +168,9 @@ export PATH="$PATH:$HOME/.yarn/bin"
 export PATH=/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/3.5/bin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Android
+export ANDROID_HOME=/usr/local/opt/android-sdk
