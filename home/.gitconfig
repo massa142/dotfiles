@@ -1,6 +1,6 @@
 [user]
 	name = massa142
-	email = m.arai@squeeze-inc.co.jp
+	email = arai.masataka142@gmail.com
 [include]
 	path = .gitconfig.local
 [core]
