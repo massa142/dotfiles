@@ -100,7 +100,6 @@ alias fuck='eval $(thefuck $(fc -ln -1))'
 # Homebrew
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:?/} brew"
 
 # nodebrew
 if [[ -f ~/.nodebrew/nodebrew ]]; then
@@ -120,13 +119,6 @@ zstyle ':completion:*' recent-dirs-insert both
 # rbenv
 export PATH=/usr/local/bin:$PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# pyenv
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:$PATH
-    eval "$(pyenv init -)"
-fi
 
 # go path
 export GOPATH=$HOME
