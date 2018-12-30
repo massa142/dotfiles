@@ -174,3 +174,5 @@ autoload -U compinit && compinit -u
 # direnv
 eval "$(direnv hook zsh)"
 
+# Flutter
+export PATH=$PATH:/usr/local/flutter/bin
