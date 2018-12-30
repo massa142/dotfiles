@@ -166,3 +166,11 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Android
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# autojump
+[[ -s /Users/massa142/.autojump/etc/profile.d/autojump.sh ]] && source /Users/massa142/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+
+# direnv
+eval "$(direnv hook zsh)"
+
