@@ -165,7 +165,7 @@ export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Android
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 
 # autojump
 [[ -s /Users/massa142/.autojump/etc/profile.d/autojump.sh ]] && source /Users/massa142/.autojump/etc/profile.d/autojump.sh
