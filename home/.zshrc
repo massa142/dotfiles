@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cloud"
+ZSH_THEME="daveverwer"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -123,6 +123,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # go path
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
+export GO111MODULE=on
 
 # homebrew cask 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -176,3 +177,7 @@ eval "$(direnv hook zsh)"
 
 # Flutter
 export PATH=$PATH:/usr/local/flutter/bin
+
+# gcloud
+source $HOME/google-cloud-sdk/completion.zsh.inc
+source $HOME/google-cloud-sdk/path.zsh.inc
