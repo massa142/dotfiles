@@ -84,16 +84,6 @@ if [ -e /usr/local/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
-# yandere
-#function command_not_found_handler() {
-#echo "ねえ、「$0」って誰かな……？ 私そんな名前、聞いたことないな……。
-#ねえ、いつまでも、そうやって笑って誤魔化せると思ってる……？ 私だってそんなに馬鹿じゃないんだよ…… ?"
-#}
-
-# osaka
-setopt correct
-SPROMPT="ほんまは「%r」これなんちゃうん?[いいえn][はいy]?"
-
 # fuck
 alias fuck='eval $(thefuck $(fc -ln -1))'
 
@@ -131,22 +121,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # VPN scutil
 alias vc='scutil --nc start'
 alias vd='scutil --nc stop'
-
-# percol
-function exists { which $1 &> /dev/null }
-
-if exists percol; then
-  function percol_select_history() {
-    local tac
-      exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
-      BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
-      CURSOR=$#BUFFER         # move cursor
-      zle -R -c               # refresh
-  }
-
-  zle -N percol_select_history
-  bindkey '^R' percol_select_history
-fi
 
 ## pyc
 export PYTHONDONTWRITEBYTECODE=1
