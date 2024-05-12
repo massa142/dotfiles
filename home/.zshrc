@@ -37,9 +37,40 @@ zinit light zdharma/history-search-multi-word
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+# git-prompt
+source ~/.zsh/git-prompt.sh
+
+# git-completion
+fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
+
+# PROMPT options
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+
+# paste mode
+unset zle_bracketed_paste
+
+# git info
+autoload -Uz vcs_info compinit && compinit
+setopt prompt_subst
+zstyle ':vcs_info:*' formats ' (%b)'
+precmd() { vcs_info }
+
+# prompt
+PROMPT='%F{025}%B%~%b%f%F{008}$vcs_info_msg_0_%f %F{008}%#%f '
+
 # Homebrew
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+
+# ls
+alias ls='ls -F'
+alias la='ls -a'
+alias ll='ls -la'
 
 ### cdr
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
