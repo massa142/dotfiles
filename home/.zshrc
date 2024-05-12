@@ -35,6 +35,8 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/history-search-multi-word
 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # Homebrew
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
