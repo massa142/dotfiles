@@ -84,20 +84,9 @@ if [ -e /usr/local/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
-# fuck
-alias fuck='eval $(thefuck $(fc -ln -1))'
-
 # Homebrew
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-
-# nodebrew
-if [[ -f ~/.nodebrew/nodebrew ]]; then
-    export PATH=$HOME/.nodebrew/current/bin:$PATH
-fi
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 ### cdr
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -105,10 +94,6 @@ add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 5000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
-
-# rbenv
-export PATH=/usr/local/bin:$PATH
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # go path
 export GOPATH=$HOME
@@ -118,40 +103,26 @@ export GO111MODULE=on
 # homebrew cask 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# VPN scutil
-alias vc='scutil --nc start'
-alias vd='scutil --nc stop'
-
 ## pyc
 export PYTHONDONTWRITEBYTECODE=1
 
-# postgres
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-
-## Yarn
-export PATH="$PATH:$HOME/.yarn/bin"
-
 # Python
-export PATH=/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH
-export PATH=/Library/Frameworks/Python.framework/Versions/3.5/bin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.8/bin:$PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.9/bin:$PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH
 
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-# Android
-export ANDROID_HOME=$HOME/Library/Android/sdk
+## Yarn
+export PATH="$PATH:$HOME/.yarn/bin"
 
-# autojump
-[[ -s /Users/massa142/.autojump/etc/profile.d/autojump.sh ]] && source /Users/massa142/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
+## pnpm
+alias pn=pnpm
 
-# direnv
-eval "$(direnv hook zsh)"
-
-# Flutter
-export PATH=$PATH:/usr/local/flutter/bin
-
-# gcloud
-source $HOME/google-cloud-sdk/completion.zsh.inc
-source $HOME/google-cloud-sdk/path.zsh.inc
+# nodebrew
+if [[ -f ~/.nodebrew/nodebrew ]]; then
+    export PATH=$HOME/.nodebrew/current/bin:$PATH
+fi
