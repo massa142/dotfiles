@@ -27,15 +27,11 @@ setopt promptsubst
 # Load Prompt
 zi snippet OMZT::daveverwer
 
-# ----------------------------
 # Zinit plugins
-# ----------------------------
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/history-search-multi-word
-
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # git-prompt
 source ~/.zsh/git-prompt.sh
@@ -43,6 +39,7 @@ source ~/.zsh/git-prompt.sh
 # git-completion
 fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 autoload -Uz compinit && compinit
 
 # PROMPT options
