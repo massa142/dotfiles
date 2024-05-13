@@ -93,6 +93,8 @@ export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/3.8/bin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/3.9/bin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH
 
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -107,3 +109,7 @@ alias pn=pnpm
 if [[ -f ~/.nodebrew/nodebrew ]]; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
+
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
