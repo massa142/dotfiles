@@ -96,6 +96,9 @@ export PATH=/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH
 
+alias python=python3
+alias pip=pip3
+
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
 
