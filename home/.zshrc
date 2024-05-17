@@ -101,6 +101,7 @@ alias pip=pip3
 
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
+export･PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 ## Yarn
 export PATH="$PATH:$HOME/.yarn/bin"
